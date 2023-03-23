@@ -118,14 +118,14 @@ if __name__ == '__main__':
     print('cmd entry:', sys.argv)
 
     if len(sys.argv) != 3:
-        print("Python script should have 2 arguments - "
+        print("Python script should be launched with 2 arguments - "
               "source folder and destination folder "
               "for copying the files")
         sys.exit(1)
 
     if not os.path.isdir(sys.argv[1]):
-        print("cannot find in operating system the source folder "
-              "given as absolute path as first script argument ")
+        print("Python script couldn't find in operating system the source folder "
+              "given as relative or absolute path as first argument for the script")
         sys.exit(2)
 
     # directory_copying_with_duplicates_overwriting('bar', 'foo')
